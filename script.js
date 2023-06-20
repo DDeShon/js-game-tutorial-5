@@ -3,7 +3,7 @@ const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
 CANVAS_WIDTH = canvas.width = 500;
 CANVAS_HEIGHT = canvas.height = 800;
-const numberOfEnemies = 200;
+const numberOfEnemies = 10;
 const enemiesArray = [];
 let gameFrame = 0;
 
@@ -29,7 +29,7 @@ class Enemy {
       (canvas.width / 2) * Math.sin(this.angle * (Math.PI / 90)) +
       (canvas.width / 2 - this.width / 2);
     this.y =
-      (canvas.height / 2) * Math.cos(this.angle * (Math.PI / 180)) +
+      (canvas.height / 2) * Math.cos(this.angle * (Math.PI / 270)) +
       (canvas.height / 2 - this.height / 2);
     this.angle += this.angleSpeed;
     if (this.x + this.width < 0) this.x = canvas.width;
